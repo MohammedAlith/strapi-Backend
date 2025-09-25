@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_home_work_sections",
+  "info": {
+    "displayName": "workSection"
+  },
+  "options": {},
+  "attributes": {
+    "worksvg": {
+      "type": "component",
+      "component": "home.logo",
+      "repeatable": false
+    },
+    "heading": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "intro": {
+      "type": "string"
+    },
+    "button": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "component",
+      "component": "home.desc",
+      "repeatable": false
+    },
+    "steps": {
+      "type": "component",
+      "component": "home.steps",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

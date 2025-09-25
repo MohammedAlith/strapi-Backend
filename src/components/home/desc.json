@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_home_descs",
+  "info": {
+    "displayName": "desc"
+  },
+  "options": {},
+  "attributes": {
+    "desc1": {
+      "type": "text"
+    },
+    "desc2": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

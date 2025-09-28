@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_home_team_members",
+  "info": {
+    "displayName": "TeamMembers"
+  },
+  "options": {},
+  "attributes": {
+    "img": {
+      "type": "component",
+      "component": "shared.media",
+      "repeatable": false
+    },
+    "details": {
+      "type": "component",
+      "component": "home.info",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_contacts",
+  "info": {
+    "displayName": "contact"
+  },
+  "options": {},
+  "attributes": {
+    "imgs": {
+      "type": "component",
+      "component": "home.imgs",
+      "repeatable": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "types": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}

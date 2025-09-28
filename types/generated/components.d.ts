@@ -15,6 +15,43 @@ export interface HomeAboutSection extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeAchievements extends Struct.ComponentSchema {
+  collectionName: 'components_home_achievements';
+  info: {
+    displayName: 'Achievements';
+  };
+  attributes: {
+    icon: Schema.Attribute.JSON;
+    title: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface HomeCommunity extends Struct.ComponentSchema {
+  collectionName: 'components_home_communities';
+  info: {
+    displayName: 'community';
+  };
+  attributes: {
+    button: Schema.Attribute.JSON;
+    desc: Schema.Attribute.Text;
+    img: Schema.Attribute.Component<'shared.media', false>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomeContact extends Struct.ComponentSchema {
+  collectionName: 'components_home_contacts';
+  info: {
+    displayName: 'contact';
+  };
+  attributes: {
+    imgs: Schema.Attribute.Component<'home.imgs', false>;
+    title: Schema.Attribute.String;
+    types: Schema.Attribute.JSON;
+  };
+}
+
 export interface HomeDesc extends Struct.ComponentSchema {
   collectionName: 'components_home_descs';
   info: {
@@ -34,6 +71,18 @@ export interface HomeDescription extends Struct.ComponentSchema {
   attributes: {};
 }
 
+export interface HomeDetails extends Struct.ComponentSchema {
+  collectionName: 'components_home_details';
+  info: {
+    displayName: 'Details';
+  };
+  attributes: {
+    intro: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    role: Schema.Attribute.String;
+  };
+}
+
 export interface HomeImgs extends Struct.ComponentSchema {
   collectionName: 'components_home_imgs';
   info: {
@@ -44,6 +93,18 @@ export interface HomeImgs extends Struct.ComponentSchema {
     img1url1: Schema.Attribute.String;
     img2: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     img2url2: Schema.Attribute.String;
+  };
+}
+
+export interface HomeInfo extends Struct.ComponentSchema {
+  collectionName: 'components_home_infos';
+  info: {
+    displayName: 'info';
+  };
+  attributes: {
+    intro: Schema.Attribute.Text;
+    name: Schema.Attribute.String;
+    role: Schema.Attribute.String;
   };
 }
 
@@ -82,6 +143,29 @@ export interface HomeSteps extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeTeamMembers extends Struct.ComponentSchema {
+  collectionName: 'components_home_team_members';
+  info: {
+    displayName: 'TeamMembers';
+  };
+  attributes: {
+    details: Schema.Attribute.Component<'home.info', true>;
+    img: Schema.Attribute.Component<'shared.media', false>;
+  };
+}
+
+export interface HomeTeamsProfessionals extends Struct.ComponentSchema {
+  collectionName: 'components_home_teams_professionals';
+  info: {
+    displayName: 'TeamsProfessionals';
+  };
+  attributes: {
+    details: Schema.Attribute.Component<'home.details', true>;
+    Icons: Schema.Attribute.JSON;
+    Imgs: Schema.Attribute.Component<'shared.media', true>;
+  };
+}
+
 export interface HomeWorkSection extends Struct.ComponentSchema {
   collectionName: 'components_home_work_sections';
   info: {
@@ -101,11 +185,12 @@ export interface HomeWorkSection extends Struct.ComponentSchema {
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
-    displayName: 'Media';
+    displayName: 'Img';
     icon: 'file-video';
   };
   attributes: {
-    file: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    img: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    imgurl: Schema.Attribute.String;
   };
 }
 
@@ -164,12 +249,19 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'home.about-section': HomeAboutSection;
+      'home.achievements': HomeAchievements;
+      'home.community': HomeCommunity;
+      'home.contact': HomeContact;
       'home.desc': HomeDesc;
       'home.description': HomeDescription;
+      'home.details': HomeDetails;
       'home.imgs': HomeImgs;
+      'home.info': HomeInfo;
       'home.logo': HomeLogo;
       'home.navtab': HomeNavtab;
       'home.steps': HomeSteps;
+      'home.team-members': HomeTeamMembers;
+      'home.teams-professionals': HomeTeamsProfessionals;
       'home.work-section': HomeWorkSection;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;

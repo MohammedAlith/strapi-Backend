@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_home_infos",
+  "info": {
+    "displayName": "info"
+  },
+  "options": {},
+  "attributes": {
+    "intro": {
+      "type": "text"
+    },
+    "name": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

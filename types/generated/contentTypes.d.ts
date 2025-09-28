@@ -550,6 +550,9 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   };
   attributes: {
     AboutSection: Schema.Attribute.Component<'home.about-section', false>;
+    Achievement: Schema.Attribute.Component<'home.achievements', true>;
+    community: Schema.Attribute.Component<'home.community', false>;
+    contact: Schema.Attribute.Component<'home.contact', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -561,37 +564,15 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     Navtabs: Schema.Attribute.Component<'home.navtab', false>;
     publishedAt: Schema.Attribute.DateTime;
+    Teams: Schema.Attribute.Component<'home.team-members', false>;
+    teamsprofessional: Schema.Attribute.Component<
+      'home.teams-professionals',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     WorkSection: Schema.Attribute.Component<'home.work-section', false>;
-  };
-}
-
-export interface ApiImageImage extends Struct.SingleTypeSchema {
-  collectionName: 'images';
-  info: {
-    displayName: 'image';
-    pluralName: 'images';
-    singularName: 'image';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    imgsf: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    link: Schema.Attribute.String;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::image.image'> &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    url: Schema.Attribute.String;
   };
 }
 
@@ -1110,7 +1091,6 @@ declare module '@strapi/strapi' {
       'api::category.category': ApiCategoryCategory;
       'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;
-      'api::image.image': ApiImageImage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

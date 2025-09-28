@@ -25,6 +25,31 @@
       "type": "component",
       "component": "home.work-section",
       "repeatable": false
+    },
+    "Teams": {
+      "type": "component",
+      "component": "home.team-members",
+      "repeatable": false
+    },
+    "teamsprofessional": {
+      "type": "component",
+      "component": "home.teams-professionals",
+      "repeatable": false
+    },
+    "Achievement": {
+      "type": "component",
+      "component": "home.achievements",
+      "repeatable": true
+    },
+    "contact": {
+      "type": "component",
+      "component": "home.contact",
+      "repeatable": false
+    },
+    "community": {
+      "type": "component",
+      "component": "home.community",
+      "repeatable": false
     }
   }
 }

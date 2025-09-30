@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_home_supports",
+  "info": {
+    "displayName": "support"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "list": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}

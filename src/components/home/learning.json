@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_home_learnings",
+  "info": {
+    "displayName": "learning"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "list": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}

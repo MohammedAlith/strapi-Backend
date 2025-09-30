@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_home_helps",
+  "info": {
+    "displayName": "help"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "list": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}

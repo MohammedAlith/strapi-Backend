@@ -50,6 +50,11 @@
       "type": "component",
       "component": "home.community",
       "repeatable": false
+    },
+    "footer": {
+      "type": "component",
+      "component": "home.footer",
+      "repeatable": false
     }
   }
 }

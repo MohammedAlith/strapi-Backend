@@ -83,6 +83,30 @@ export interface HomeDetails extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeFooter extends Struct.ComponentSchema {
+  collectionName: 'components_home_footers';
+  info: {
+    displayName: 'footer';
+  };
+  attributes: {
+    copyrights: Schema.Attribute.String;
+    icons: Schema.Attribute.JSON;
+    logo: Schema.Attribute.Component<'shared.media', false>;
+    Resources: Schema.Attribute.JSON;
+  };
+}
+
+export interface HomeHelp extends Struct.ComponentSchema {
+  collectionName: 'components_home_helps';
+  info: {
+    displayName: 'help';
+  };
+  attributes: {
+    list: Schema.Attribute.JSON;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface HomeImgs extends Struct.ComponentSchema {
   collectionName: 'components_home_imgs';
   info: {
@@ -105,6 +129,17 @@ export interface HomeInfo extends Struct.ComponentSchema {
     intro: Schema.Attribute.Text;
     name: Schema.Attribute.String;
     role: Schema.Attribute.String;
+  };
+}
+
+export interface HomeLearning extends Struct.ComponentSchema {
+  collectionName: 'components_home_learnings';
+  info: {
+    displayName: 'learning';
+  };
+  attributes: {
+    list: Schema.Attribute.JSON;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -131,6 +166,14 @@ export interface HomeNavtab extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeResources extends Struct.ComponentSchema {
+  collectionName: 'components_home_resources';
+  info: {
+    displayName: 'Resources';
+  };
+  attributes: {};
+}
+
 export interface HomeSteps extends Struct.ComponentSchema {
   collectionName: 'components_home_steps';
   info: {
@@ -140,6 +183,17 @@ export interface HomeSteps extends Struct.ComponentSchema {
     description: Schema.Attribute.String;
     stepno: Schema.Attribute.String;
     Title: Schema.Attribute.String;
+  };
+}
+
+export interface HomeSupport extends Struct.ComponentSchema {
+  collectionName: 'components_home_supports';
+  info: {
+    displayName: 'support';
+  };
+  attributes: {
+    list: Schema.Attribute.JSON;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -255,11 +309,16 @@ declare module '@strapi/strapi' {
       'home.desc': HomeDesc;
       'home.description': HomeDescription;
       'home.details': HomeDetails;
+      'home.footer': HomeFooter;
+      'home.help': HomeHelp;
       'home.imgs': HomeImgs;
       'home.info': HomeInfo;
+      'home.learning': HomeLearning;
       'home.logo': HomeLogo;
       'home.navtab': HomeNavtab;
+      'home.resources': HomeResources;
       'home.steps': HomeSteps;
+      'home.support': HomeSupport;
       'home.team-members': HomeTeamMembers;
       'home.teams-professionals': HomeTeamsProfessionals;
       'home.work-section': HomeWorkSection;

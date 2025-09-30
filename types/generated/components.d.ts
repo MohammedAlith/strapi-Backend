@@ -89,10 +89,10 @@ export interface HomeFooter extends Struct.ComponentSchema {
     displayName: 'footer';
   };
   attributes: {
-    copyrights: Schema.Attribute.String;
     icons: Schema.Attribute.JSON;
-    logo: Schema.Attribute.Component<'shared.media', false>;
-    Resources: Schema.Attribute.JSON;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    logourl: Schema.Attribute.String;
+    resources: Schema.Attribute.JSON;
   };
 }
 

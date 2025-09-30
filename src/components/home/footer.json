@@ -6,17 +6,22 @@
   "options": {},
   "attributes": {
     "logo": {
-      "type": "component",
-      "component": "shared.media",
-      "repeatable": false
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
-    "copyrights": {
+    "logourl": {
       "type": "string"
     },
     "icons": {
       "type": "json"
     },
-    "Resources": {
+    "resources": {
       "type": "json"
     }
   },

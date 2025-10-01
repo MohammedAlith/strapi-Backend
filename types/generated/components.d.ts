@@ -83,16 +83,14 @@ export interface HomeDetails extends Struct.ComponentSchema {
   };
 }
 
-export interface HomeFooter extends Struct.ComponentSchema {
-  collectionName: 'components_home_footers';
+export interface HomeFoot extends Struct.ComponentSchema {
+  collectionName: 'components_home_feet';
   info: {
-    displayName: 'footer';
+    displayName: 'foot';
   };
   attributes: {
-    icons: Schema.Attribute.JSON;
-    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    logourl: Schema.Attribute.String;
-    resources: Schema.Attribute.JSON;
+    footer: Schema.Attribute.JSON;
+    logo: Schema.Attribute.Component<'shared.media', false>;
   };
 }
 
@@ -309,7 +307,7 @@ declare module '@strapi/strapi' {
       'home.desc': HomeDesc;
       'home.description': HomeDescription;
       'home.details': HomeDetails;
-      'home.footer': HomeFooter;
+      'home.foot': HomeFoot;
       'home.help': HomeHelp;
       'home.imgs': HomeImgs;
       'home.info': HomeInfo;

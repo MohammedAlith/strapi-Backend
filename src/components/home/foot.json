@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_home_feet",
+  "info": {
+    "displayName": "foot"
+  },
+  "options": {},
+  "attributes": {
+    "footer": {
+      "type": "json"
+    },
+    "logo": {
+      "type": "component",
+      "component": "shared.media",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

@@ -53,7 +53,7 @@
     },
     "footer": {
       "type": "component",
-      "component": "home.footer",
+      "component": "home.foot",
       "repeatable": false
     }
   }

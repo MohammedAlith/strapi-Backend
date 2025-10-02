@@ -55,6 +55,11 @@
       "type": "component",
       "component": "home.foot",
       "repeatable": false
+    },
+    "hero": {
+      "type": "component",
+      "component": "home.hero",
+      "repeatable": false
     }
   }
 }

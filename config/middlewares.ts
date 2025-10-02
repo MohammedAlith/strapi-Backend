@@ -15,6 +15,20 @@ export default [
             'https://market-assets.strapi.io',
             'https://oebiqlayntcsanrbmysd.supabase.co',
           ],
+           'media-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'https://your-video-domain.com',
+             'https://oebiqlayntcsanrbmysd.supabase.co', // replace with your video host if any
+          ],
+          'video-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'https://your-video-domain.com',
+             'https://oebiqlayntcsanrbmysd.supabase.co',
+          ],
         
           upgradeInsecureRequests: null,
         },

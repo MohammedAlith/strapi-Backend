@@ -105,6 +105,24 @@ export interface HomeHelp extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeHero extends Struct.ComponentSchema {
+  collectionName: 'components_home_heroes';
+  info: {
+    displayName: 'hero';
+  };
+  attributes: {
+    img1: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    img2: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    img3: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    slides: Schema.Attribute.JSON;
+    url1: Schema.Attribute.String;
+    url2: Schema.Attribute.String;
+    url3: Schema.Attribute.String;
+    video: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    videourl: Schema.Attribute.String;
+  };
+}
+
 export interface HomeImgs extends Struct.ComponentSchema {
   collectionName: 'components_home_imgs';
   info: {
@@ -115,6 +133,8 @@ export interface HomeImgs extends Struct.ComponentSchema {
     img1url1: Schema.Attribute.String;
     img2: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     img2url2: Schema.Attribute.String;
+    img3: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    img3url3: Schema.Attribute.String;
   };
 }
 
@@ -309,6 +329,7 @@ declare module '@strapi/strapi' {
       'home.details': HomeDetails;
       'home.foot': HomeFoot;
       'home.help': HomeHelp;
+      'home.hero': HomeHero;
       'home.imgs': HomeImgs;
       'home.info': HomeInfo;
       'home.learning': HomeLearning;

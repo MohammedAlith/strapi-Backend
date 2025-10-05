@@ -20,6 +20,16 @@
       "type": "component",
       "component": "home.location",
       "repeatable": false
+    },
+    "Form": {
+      "type": "component",
+      "component": "home.form",
+      "repeatable": false
+    },
+    "Achievement": {
+      "type": "component",
+      "component": "home.achievements",
+      "repeatable": false
     }
   }
 }

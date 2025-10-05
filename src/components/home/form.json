@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_home_forms",
+  "info": {
+    "displayName": "Form"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "Inputsplaceholder": {
+      "type": "json"
+    },
+    "Button": {
+      "type": "string"
+    },
+    "mandatory": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

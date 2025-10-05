@@ -21,9 +21,8 @@ export interface HomeAchievements extends Struct.ComponentSchema {
     displayName: 'Achievements';
   };
   attributes: {
-    icon: Schema.Attribute.JSON;
+    list: Schema.Attribute.JSON;
     title: Schema.Attribute.String;
-    value: Schema.Attribute.String;
   };
 }
 
@@ -49,6 +48,20 @@ export interface HomeContact extends Struct.ComponentSchema {
     imgs: Schema.Attribute.Component<'home.imgs', false>;
     title: Schema.Attribute.String;
     types: Schema.Attribute.JSON;
+  };
+}
+
+export interface HomeContactMain extends Struct.ComponentSchema {
+  collectionName: 'components_home_contact_mains';
+  info: {
+    displayName: 'ContactMain';
+  };
+  attributes: {
+    desc: Schema.Attribute.String;
+    desc2: Schema.Attribute.String;
+    img: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    imgurl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -91,6 +104,20 @@ export interface HomeFoot extends Struct.ComponentSchema {
   attributes: {
     footer: Schema.Attribute.JSON;
     logo: Schema.Attribute.Component<'shared.media', false>;
+  };
+}
+
+export interface HomeForm extends Struct.ComponentSchema {
+  collectionName: 'components_home_forms';
+  info: {
+    displayName: 'Form';
+  };
+  attributes: {
+    Button: Schema.Attribute.String;
+    desc: Schema.Attribute.Text;
+    Inputsplaceholder: Schema.Attribute.JSON;
+    mandatory: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -158,6 +185,36 @@ export interface HomeLearning extends Struct.ComponentSchema {
   attributes: {
     list: Schema.Attribute.JSON;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface HomeList extends Struct.ComponentSchema {
+  collectionName: 'components_home_lists';
+  info: {
+    displayName: 'list';
+  };
+  attributes: {
+    Description: Schema.Attribute.JSON;
+    Title: Schema.Attribute.String;
+  };
+}
+
+export interface HomeList2 extends Struct.ComponentSchema {
+  collectionName: 'components_home_list2s';
+  info: {
+    displayName: 'list2';
+  };
+  attributes: {};
+}
+
+export interface HomeLocation extends Struct.ComponentSchema {
+  collectionName: 'components_home_locations';
+  info: {
+    displayName: 'Location';
+  };
+  attributes: {
+    list1: Schema.Attribute.Component<'home.list', true>;
+    mapurl: Schema.Attribute.Text;
   };
 }
 
@@ -324,15 +381,20 @@ declare module '@strapi/strapi' {
       'home.achievements': HomeAchievements;
       'home.community': HomeCommunity;
       'home.contact': HomeContact;
+      'home.contact-main': HomeContactMain;
       'home.desc': HomeDesc;
       'home.description': HomeDescription;
       'home.details': HomeDetails;
       'home.foot': HomeFoot;
+      'home.form': HomeForm;
       'home.help': HomeHelp;
       'home.hero': HomeHero;
       'home.imgs': HomeImgs;
       'home.info': HomeInfo;
       'home.learning': HomeLearning;
+      'home.list': HomeList;
+      'home.list2': HomeList2;
+      'home.location': HomeLocation;
       'home.logo': HomeLogo;
       'home.navtab': HomeNavtab;
       'home.resources': HomeResources;

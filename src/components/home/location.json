@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_home_locations",
+  "info": {
+    "displayName": "Location"
+  },
+  "options": {},
+  "attributes": {
+    "mapurl": {
+      "type": "text"
+    },
+    "list1": {
+      "type": "component",
+      "component": "home.list",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

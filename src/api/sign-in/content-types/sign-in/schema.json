@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "sign_ins",
+  "info": {
+    "singularName": "sign-in",
+    "pluralName": "sign-ins",
+    "displayName": "SignIn"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Signin": {
+      "type": "component",
+      "component": "home.signin",
+      "repeatable": false
+    }
+  }
+}

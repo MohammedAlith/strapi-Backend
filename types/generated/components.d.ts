@@ -249,6 +249,19 @@ export interface HomeResources extends Struct.ComponentSchema {
   attributes: {};
 }
 
+export interface HomeSignin extends Struct.ComponentSchema {
+  collectionName: 'components_home_signins';
+  info: {
+    displayName: 'Signin';
+  };
+  attributes: {
+    button: Schema.Attribute.String;
+    desc: Schema.Attribute.String;
+    Inputsplaceholder: Schema.Attribute.JSON;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface HomeSteps extends Struct.ComponentSchema {
   collectionName: 'components_home_steps';
   info: {
@@ -398,6 +411,7 @@ declare module '@strapi/strapi' {
       'home.logo': HomeLogo;
       'home.navtab': HomeNavtab;
       'home.resources': HomeResources;
+      'home.signin': HomeSignin;
       'home.steps': HomeSteps;
       'home.support': HomeSupport;
       'home.team-members': HomeTeamMembers;

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_home_signins",
+  "info": {
+    "displayName": "Signin"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "string"
+    },
+    "Inputsplaceholder": {
+      "type": "json"
+    },
+    "button": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

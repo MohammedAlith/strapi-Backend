@@ -81,9 +81,9 @@ export interface HomeCustomer extends Struct.ComponentSchema {
       true
     >;
     img2url2: Schema.Attribute.Text;
-    img3: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    img3url3: Schema.Attribute.Text;
     title: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+    value: Schema.Attribute.String;
   };
 }
 
@@ -306,6 +306,8 @@ export interface HomeServicemain extends Struct.ComponentSchema {
   };
   attributes: {
     desc: Schema.Attribute.Text;
+    img: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    imgurl: Schema.Attribute.Text;
     Title: Schema.Attribute.String;
   };
 }

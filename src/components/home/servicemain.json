@@ -10,6 +10,19 @@
     },
     "desc": {
       "type": "text"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "imgurl": {
+      "type": "text"
     }
   },
   "config": {}

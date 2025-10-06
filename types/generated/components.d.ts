@@ -65,6 +65,28 @@ export interface HomeContactMain extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeCustomer extends Struct.ComponentSchema {
+  collectionName: 'components_home_customers';
+  info: {
+    displayName: 'customer';
+  };
+  attributes: {
+    button: Schema.Attribute.String;
+    desc1: Schema.Attribute.Text;
+    desc2: Schema.Attribute.Text;
+    img1: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    img1url1: Schema.Attribute.Text;
+    img2: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    img2url2: Schema.Attribute.Text;
+    img3: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    img3url3: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface HomeDesc extends Struct.ComponentSchema {
   collectionName: 'components_home_descs';
   info: {
@@ -229,6 +251,19 @@ export interface HomeLogo extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeModel extends Struct.ComponentSchema {
+  collectionName: 'components_home_models';
+  info: {
+    displayName: 'model';
+  };
+  attributes: {
+    desc: Schema.Attribute.Text;
+    img: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    imgurl: Schema.Attribute.Text;
+    videourl: Schema.Attribute.Text;
+  };
+}
+
 export interface HomeNavtab extends Struct.ComponentSchema {
   collectionName: 'components_home_navtabs';
   info: {
@@ -241,10 +276,44 @@ export interface HomeNavtab extends Struct.ComponentSchema {
   };
 }
 
+export interface HomePrice extends Struct.ComponentSchema {
+  collectionName: 'components_home_prices';
+  info: {
+    displayName: 'Price';
+  };
+  attributes: {
+    button: Schema.Attribute.Text;
+    choose: Schema.Attribute.JSON;
+    desc: Schema.Attribute.Text;
+    desc2: Schema.Attribute.String;
+    pricecard: Schema.Attribute.JSON;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface HomeResources extends Struct.ComponentSchema {
   collectionName: 'components_home_resources';
   info: {
     displayName: 'Resources';
+  };
+  attributes: {};
+}
+
+export interface HomeServicemain extends Struct.ComponentSchema {
+  collectionName: 'components_home_servicemains';
+  info: {
+    displayName: 'servicemain';
+  };
+  attributes: {
+    desc: Schema.Attribute.Text;
+    Title: Schema.Attribute.String;
+  };
+}
+
+export interface HomeServices extends Struct.ComponentSchema {
+  collectionName: 'components_home_services';
+  info: {
+    displayName: 'services';
   };
   attributes: {};
 }
@@ -274,12 +343,44 @@ export interface HomeSteps extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeStepslist extends Struct.ComponentSchema {
+  collectionName: 'components_home_stepslists';
+  info: {
+    displayName: 'stepslist';
+  };
+  attributes: {
+    desc: Schema.Attribute.Text;
+    steplist: Schema.Attribute.JSON;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface HomeSupport extends Struct.ComponentSchema {
   collectionName: 'components_home_supports';
   info: {
     displayName: 'support';
   };
   attributes: {
+    list: Schema.Attribute.JSON;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomeSupportive extends Struct.ComponentSchema {
+  collectionName: 'components_home_supportives';
+  info: {
+    displayName: 'supportive';
+  };
+  attributes: {
+    desc: Schema.Attribute.Text;
+    img1: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    img2: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    img2url2: Schema.Attribute.Text;
+    img3: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    img3url3: Schema.Attribute.Text;
+    img4: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    img4url4: Schema.Attribute.Text;
+    imgurl1: Schema.Attribute.Text;
     list: Schema.Attribute.JSON;
     title: Schema.Attribute.String;
   };
@@ -395,6 +496,7 @@ declare module '@strapi/strapi' {
       'home.community': HomeCommunity;
       'home.contact': HomeContact;
       'home.contact-main': HomeContactMain;
+      'home.customer': HomeCustomer;
       'home.desc': HomeDesc;
       'home.description': HomeDescription;
       'home.details': HomeDetails;
@@ -409,11 +511,17 @@ declare module '@strapi/strapi' {
       'home.list2': HomeList2;
       'home.location': HomeLocation;
       'home.logo': HomeLogo;
+      'home.model': HomeModel;
       'home.navtab': HomeNavtab;
+      'home.price': HomePrice;
       'home.resources': HomeResources;
+      'home.servicemain': HomeServicemain;
+      'home.services': HomeServices;
       'home.signin': HomeSignin;
       'home.steps': HomeSteps;
+      'home.stepslist': HomeStepslist;
       'home.support': HomeSupport;
+      'home.supportive': HomeSupportive;
       'home.team-members': HomeTeamMembers;
       'home.teams-professionals': HomeTeamsProfessionals;
       'home.work-section': HomeWorkSection;

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_home_stepslists",
+  "info": {
+    "displayName": "stepslist"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "steplist": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}

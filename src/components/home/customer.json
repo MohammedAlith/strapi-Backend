@@ -1,0 +1,61 @@
+{
+  "collectionName": "components_home_customers",
+  "info": {
+    "displayName": "customer"
+  },
+  "options": {},
+  "attributes": {
+    "img1": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "img1url1": {
+      "type": "text"
+    },
+    "img3url3": {
+      "type": "text"
+    },
+    "img3": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "img2url2": {
+      "type": "text"
+    },
+    "img2": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "desc1": {
+      "type": "text"
+    },
+    "desc2": {
+      "type": "text"
+    },
+    "button": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

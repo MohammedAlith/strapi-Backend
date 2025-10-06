@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_home_models",
+  "info": {
+    "displayName": "model"
+  },
+  "options": {},
+  "attributes": {
+    "imgurl": {
+      "type": "text"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "videourl": {
+      "type": "text"
+    },
+    "desc": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_home_prices",
+  "info": {
+    "displayName": "Price"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "button": {
+      "type": "text"
+    },
+    "desc2": {
+      "type": "string"
+    },
+    "choose": {
+      "type": "json"
+    },
+    "pricecard": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}

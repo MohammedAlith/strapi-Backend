@@ -640,6 +640,40 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiServicePageServicePage extends Struct.SingleTypeSchema {
+  collectionName: 'service_pages';
+  info: {
+    displayName: 'servicePage';
+    pluralName: 'service-pages';
+    singularName: 'service-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    customer: Schema.Attribute.Component<'home.customer', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::service-page.service-page'
+    > &
+      Schema.Attribute.Private;
+    Main: Schema.Attribute.Component<'home.servicemain', false>;
+    model: Schema.Attribute.Component<'home.model', false>;
+    Pricing: Schema.Attribute.Component<'home.price', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    services: Schema.Attribute.JSON;
+    steps: Schema.Attribute.Component<'home.stepslist', false>;
+    supports: Schema.Attribute.Component<'home.supportive', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiSignInSignIn extends Struct.SingleTypeSchema {
   collectionName: 'sign_ins';
   info: {
@@ -1216,6 +1250,7 @@ declare module '@strapi/strapi' {
       'api::contact-page.contact-page': ApiContactPageContactPage;
       'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::service-page.service-page': ApiServicePageServicePage;
       'api::sign-in.sign-in': ApiSignInSignIn;
       'api::sign-up.sign-up': ApiSignUpSignUp;
       'plugin::content-releases.release': PluginContentReleasesRelease;

@@ -26,6 +26,53 @@ export interface HomeAchievements extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeBenefits extends Struct.ComponentSchema {
+  collectionName: 'components_home_benefits';
+  info: {
+    displayName: 'benefits';
+  };
+  attributes: {
+    button: Schema.Attribute.String;
+    img: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    list: Schema.Attribute.Component<'home.benefitslist', true>;
+  };
+}
+
+export interface HomeBenefitslist extends Struct.ComponentSchema {
+  collectionName: 'components_home_benefitslists';
+  info: {
+    displayName: 'benefitslist';
+  };
+  attributes: {
+    desc: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomeCards extends Struct.ComponentSchema {
+  collectionName: 'components_home_cards';
+  info: {
+    displayName: 'cards';
+  };
+  attributes: {
+    intro: Schema.Attribute.Text;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    name: Schema.Attribute.String;
+    role: Schema.Attribute.String;
+  };
+}
+
+export interface HomeCareerMain extends Struct.ComponentSchema {
+  collectionName: 'components_home_career_mains';
+  info: {
+    displayName: 'CareerMain';
+  };
+  attributes: {
+    desc: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface HomeCommunity extends Struct.ComponentSchema {
   collectionName: 'components_home_communities';
   info: {
@@ -115,6 +162,29 @@ export interface HomeDetails extends Struct.ComponentSchema {
     intro: Schema.Attribute.String;
     name: Schema.Attribute.String;
     role: Schema.Attribute.String;
+  };
+}
+
+export interface HomeFaq extends Struct.ComponentSchema {
+  collectionName: 'components_home_faqs';
+  info: {
+    displayName: 'FAQ';
+  };
+  attributes: {
+    desc: Schema.Attribute.Text;
+    list: Schema.Attribute.Component<'home.faqlist', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomeFaqlist extends Struct.ComponentSchema {
+  collectionName: 'components_home_faqlists';
+  info: {
+    displayName: 'faqlist';
+  };
+  attributes: {
+    ans: Schema.Attribute.Text;
+    ques: Schema.Attribute.Text;
   };
 }
 
@@ -276,6 +346,34 @@ export interface HomeNavtab extends Struct.ComponentSchema {
   };
 }
 
+export interface HomePositionlist extends Struct.ComponentSchema {
+  collectionName: 'components_home_positionlists';
+  info: {
+    displayName: 'positionlist';
+  };
+  attributes: {
+    loc: Schema.Attribute.Text;
+    logo: Schema.Attribute.String;
+    role: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+  };
+}
+
+export interface HomePositions extends Struct.ComponentSchema {
+  collectionName: 'components_home_positions';
+  info: {
+    displayName: 'positions';
+  };
+  attributes: {
+    ans: Schema.Attribute.Text;
+    button: Schema.Attribute.String;
+    desc: Schema.Attribute.Text;
+    lists: Schema.Attribute.Component<'home.positionlist', true>;
+    ques: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface HomePrice extends Struct.ComponentSchema {
   collectionName: 'components_home_prices';
   info: {
@@ -388,6 +486,18 @@ export interface HomeSupportive extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeTeam extends Struct.ComponentSchema {
+  collectionName: 'components_home_teams';
+  info: {
+    displayName: 'team';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'home.cards', true>;
+    desc: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface HomeTeamMembers extends Struct.ComponentSchema {
   collectionName: 'components_home_team_members';
   info: {
@@ -495,6 +605,10 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'home.about-section': HomeAboutSection;
       'home.achievements': HomeAchievements;
+      'home.benefits': HomeBenefits;
+      'home.benefitslist': HomeBenefitslist;
+      'home.cards': HomeCards;
+      'home.career-main': HomeCareerMain;
       'home.community': HomeCommunity;
       'home.contact': HomeContact;
       'home.contact-main': HomeContactMain;
@@ -502,6 +616,8 @@ declare module '@strapi/strapi' {
       'home.desc': HomeDesc;
       'home.description': HomeDescription;
       'home.details': HomeDetails;
+      'home.faq': HomeFaq;
+      'home.faqlist': HomeFaqlist;
       'home.foot': HomeFoot;
       'home.form': HomeForm;
       'home.help': HomeHelp;
@@ -515,6 +631,8 @@ declare module '@strapi/strapi' {
       'home.logo': HomeLogo;
       'home.model': HomeModel;
       'home.navtab': HomeNavtab;
+      'home.positionlist': HomePositionlist;
+      'home.positions': HomePositions;
       'home.price': HomePrice;
       'home.resources': HomeResources;
       'home.servicemain': HomeServicemain;
@@ -524,6 +642,7 @@ declare module '@strapi/strapi' {
       'home.stepslist': HomeStepslist;
       'home.support': HomeSupport;
       'home.supportive': HomeSupportive;
+      'home.team': HomeTeam;
       'home.team-members': HomeTeamMembers;
       'home.teams-professionals': HomeTeamsProfessionals;
       'home.work-section': HomeWorkSection;

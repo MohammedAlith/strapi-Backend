@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_home_positionlists",
+  "info": {
+    "displayName": "positionlist"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "loc": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_home_faqlists",
+  "info": {
+    "displayName": "faqlist"
+  },
+  "options": {},
+  "attributes": {
+    "ques": {
+      "type": "text"
+    },
+    "ans": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

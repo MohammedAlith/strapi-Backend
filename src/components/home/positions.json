@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_home_positions",
+  "info": {
+    "displayName": "positions"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "lists": {
+      "type": "component",
+      "component": "home.positionlist",
+      "repeatable": true
+    },
+    "ques": {
+      "type": "text"
+    },
+    "ans": {
+      "type": "text"
+    },
+    "button": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

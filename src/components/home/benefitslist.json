@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_home_benefitslists",
+  "info": {
+    "displayName": "benefitslist"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

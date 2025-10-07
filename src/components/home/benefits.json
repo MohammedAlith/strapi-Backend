@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_home_benefits",
+  "info": {
+    "displayName": "benefits"
+  },
+  "options": {},
+  "attributes": {
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "list": {
+      "type": "component",
+      "component": "home.benefitslist",
+      "repeatable": true
+    },
+    "button": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

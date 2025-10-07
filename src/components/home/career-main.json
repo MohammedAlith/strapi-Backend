@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_home_career_mains",
+  "info": {
+    "displayName": "CareerMain"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

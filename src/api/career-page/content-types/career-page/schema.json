@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "career_pages",
+  "info": {
+    "singularName": "career-page",
+    "pluralName": "career-pages",
+    "displayName": "CareerPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Main": {
+      "type": "component",
+      "component": "home.career-main",
+      "repeatable": false
+    },
+    "benefits": {
+      "type": "component",
+      "component": "home.benefits",
+      "repeatable": false
+    },
+    "teammates": {
+      "type": "component",
+      "component": "home.team",
+      "repeatable": false
+    },
+    "position": {
+      "type": "component",
+      "component": "home.positions",
+      "repeatable": false
+    },
+    "faq": {
+      "type": "component",
+      "component": "home.faq",
+      "repeatable": false
+    }
+  }
+}

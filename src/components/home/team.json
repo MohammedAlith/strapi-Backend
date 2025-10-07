@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_teams",
+  "info": {
+    "displayName": "team"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "card": {
+      "type": "component",
+      "component": "home.cards",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
